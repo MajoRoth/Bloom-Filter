@@ -35,6 +35,12 @@ public class BelongTable {
     }
 
     public boolean is_belong(String text) {
+        /*
+            return true if the element is in the table.
+            there is som probability that true will be returned
+            thus the element not in the table.
+            you can see the full explanation in the Appendix q1, q2.
+         */
         boolean flag = true;
 
         for (int i = 0; i < _k && flag; i++) {
