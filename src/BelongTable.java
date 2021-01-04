@@ -48,6 +48,7 @@ public class BelongTable {
                 flag = false;
             }
         }
+        System.out.println(text + ": " + flag);
         return flag;
     }
 

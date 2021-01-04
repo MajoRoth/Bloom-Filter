@@ -5,7 +5,7 @@ import java.io.IOException;
 public class main {
     public static void main(String args[]){
         /*
-         * When running the main specify 2 arguments.
+         * When running the main specify 4 arguments.
          * first argument - file path of elements to insert to the data structure.
          * second argument - file path of elements to check.txt if they are belong to the data structure.
          * third argument - m, the size of the array.
