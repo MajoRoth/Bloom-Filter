@@ -8,15 +8,15 @@ import java.util.HashSet;
 public class Statistics {
 
     public static void main(String[] args){
-        /*
-        String[] add = {"banana", "apple", "strawberry", "kiwi", "watermelon", "melon", "orange"};
-        String[] test = {"cow", "sheep", "chicken"};
-        */
-        false_positive_send_arrays(1000000, 13, 120000, 0.2);
+        int m = 1000000, k = 13, N = 120000;
+        double t = 0.2;
+        System.out.println("m: " + m + " k: " + k +" N: " + N + " t: " + t);
+        System.out.println("Experimental Value: "+false_positive_send_arrays(m, k, N, t));
+        System.out.println("Mathematical Value: " + calculate_theoretical_value(m, k, (int)(N*(1-t))));
 
 
     }
-    private static void false_positive_send_arrays(int m, int k, int N, double t){
+    private static double false_positive_send_arrays(int m, int k, int N, double t){
         /*
         m - size of table
         k - number of hash functions
@@ -35,10 +35,9 @@ public class Statistics {
             test[i] = Integer.toString(j*b);
         }
 
-        System.out.println(false_positive(m, k, add, test));
-
-
+        return false_positive(m, k, add, test);
     }
+
 
     private static double false_positive(int m, int k, String[] add, String[] test){
         /*
@@ -61,5 +60,15 @@ public class Statistics {
             }
         }
         return ((double)counter)/test.length;
+        }
+
+        private static double calculate_theoretical_value(int _m, int _k, int _N){
+            double m = (double)_m;
+            double k = (double)_k;
+            double N = (double)_N;
+
+            double t1 = Math.pow((m-1)/m, N*k);
+            double t2 = Math.pow(1-t1, k);
+            return t2;
         }
 }
