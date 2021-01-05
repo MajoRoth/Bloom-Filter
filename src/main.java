@@ -26,11 +26,15 @@ public class main {
         	System.out.println("added " + input_to_insert[i]);
         }
         
-        
+        /*
+         * checking if the elements belong to the table
+         */
         String[] input_to_check = read_file(args[1]);
         for(int j=0; j<input_to_check.length; j++) {
-            System.out.println(input_to_check[j] + " belong: " + t.is_belong(input_to_check[j]));
-
+        	if (is_belong(input_to_check[j]) == true)
+        		System.out.println(input_to_check[j] + " probably belongs to the table");//false positive is possible
+        	else
+        		System.out.println(input_to_check[j] + " does not belong to the table"); //false negative isn't possible
         }
     }
         
@@ -38,7 +42,7 @@ public class main {
     
     private static String[] read_file(String path) {
     	/*
-         * receiving input from a file
+         * the function receive a comma-separated text file and returns a string array of the values
          */
     	String file = "";
         try(BufferedReader in = new BufferedReader(new FileReader(path))) {
