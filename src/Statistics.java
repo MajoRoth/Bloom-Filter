@@ -12,22 +12,32 @@ public class Statistics {
         String[] add = {"banana", "apple", "strawberry", "kiwi", "watermelon", "melon", "orange"};
         String[] test = {"cow", "sheep", "chicken"};
         */
-        int N = 100000;
-        int M = (int)(0.2*N);
-        int m = 1000000;
-        String[] add = new String[N];
-        String[] test = new String[M];
+        false_positive_send_arrays(1000000, 13, 120000, 0.2);
+
+
+    }
+    private static void false_positive_send_arrays(int m, int k, int N, double t){
+        /*
+        m - size of table
+        k - number of hash functions
+        N - size of all elements generated
+        t - ratio of elements that will be send to test 0<test<1
+         */
+
+        String[] add = new String[(int)(N*(1-t))];
+        String[] test = new String[(int)(N*t)];
         int j=9;
-        for (int i=0; i<N; i++){
+        for (int i=0; i<N*(1-t); i++){
             add[i] = Integer.toString(j*i);
         }
-        int k = N+1;
-        for (int i=0; i< M; i++, k++){
-
-            test[i] = Integer.toString(j*k);
+        int b = (int)(N*(1-t)+1);
+        for (int i=0; i< N*t; i++, b++){
+            test[i] = Integer.toString(j*b);
         }
 
-        System.out.println(false_positive(m, 13, add, test));
+        System.out.println(false_positive(m, k, add, test));
+
+
     }
 
     private static double false_positive(int m, int k, String[] add, String[] test){
