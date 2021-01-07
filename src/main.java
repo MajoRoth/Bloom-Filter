@@ -31,7 +31,7 @@ public class main {
          */
         String[] input_to_check = read_file(args[1]);
         for(int j=0; j<input_to_check.length; j++) {
-        	if (is_belong(input_to_check[j]) == true)
+        	if (t.is_belong(input_to_check[j]) == true)
         		System.out.println(input_to_check[j] + " probably belongs to the table");//false positive is possible
         	else
         		System.out.println(input_to_check[j] + " does not belong to the table"); //false negative isn't possible

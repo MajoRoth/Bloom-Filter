@@ -20,7 +20,6 @@ public class BelongTable {
         }
         _m = m;
         _k = k;
-        System.out.println("Table Created");
     }
 
     public void add_element(String text) {
@@ -48,7 +47,6 @@ public class BelongTable {
                 flag = false;
             }
         }
-        System.out.println(text + ": " + flag);
         return flag;
     }
 

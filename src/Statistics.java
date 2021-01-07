@@ -8,11 +8,124 @@ import java.util.HashSet;
 public class Statistics {
 
     public static void main(String[] args){
-        int m = 1000000, k = 13, N = 120000;
+        int i=1;
+        int m = 1000000, k = 5, N = 120000;
         double t = 0.2;
-        System.out.println("m: " + m + " k: " + k +" N: " + N + " t: " + t);
+        System.out.println("test num: " + i +" - m: " + m + " k: " + k +" N: " + N + " t: " + t);
         System.out.println("Experimental Value: "+false_positive_send_arrays(m, k, N, t));
         System.out.println("Mathematical Value: " + calculate_theoretical_value(m, k, (int)(N*(1-t))));
+
+        m = 1000000;
+        k = 7;
+        N = 120000;
+        t = 0.2;
+        i++;
+        System.out.println("test num: " + i +" - m: " + m + " k: " + k +" N: " + N + " t: " + t);
+        System.out.println("Experimental Value: "+false_positive_send_arrays(m, k, N, t));
+        System.out.println("Mathematical Value: " + calculate_theoretical_value(m, k, (int)(N*(1-t))));
+
+        m = 1000000;
+        k = 9;
+        N = 120000;
+        t = 0.2;
+        i++;
+        System.out.println("test num: " + i +" - m: " + m + " k: " + k +" N: " + N + " t: " + t);
+        System.out.println("Experimental Value: "+false_positive_send_arrays(m, k, N, t));
+        System.out.println("Mathematical Value: " + calculate_theoretical_value(m, k, (int)(N*(1-t))));
+
+        m = 1000000;
+        k = 11;
+        N = 120000;
+        t = 0.2;
+        i++;
+        System.out.println("test num: " + i +" - m: " + m + " k: " + k +" N: " + N + " t: " + t);
+        System.out.println("Experimental Value: "+false_positive_send_arrays(m, k, N, t));
+        System.out.println("Mathematical Value: " + calculate_theoretical_value(m, k, (int)(N*(1-t))));
+
+        m = 1000000;
+        k = 13;
+        N = 120000;
+        t = 0.2;
+        i++;
+        System.out.println("test num: " + i +" - m: " + m + " k: " + k +" N: " + N + " t: " + t);
+        System.out.println("Experimental Value: "+false_positive_send_arrays(m, k, N, t));
+        System.out.println("Mathematical Value: " + calculate_theoretical_value(m, k, (int)(N*(1-t))));
+
+
+
+        m = 1000000;
+        k = 5;
+        N = 20000;
+        t = 0.2;
+        i++;
+        System.out.println("test num: " + i +" - m: " + m + " k: " + k +" N: " + N + " t: " + t);
+        System.out.println("Experimental Value: "+false_positive_send_arrays(m, k, N, t));
+        System.out.println("Mathematical Value: " + calculate_theoretical_value(m, k, (int)(N*(1-t))));
+
+
+        m = 1000000;
+        k = 7;
+        N = 20000;
+        t = 0.2;
+        i++;
+        System.out.println("test num: " + i +" - m: " + m + " k: " + k +" N: " + N + " t: " + t);
+        System.out.println("Experimental Value: "+false_positive_send_arrays(m, k, N, t));
+        System.out.println("Mathematical Value: " + calculate_theoretical_value(m, k, (int)(N*(1-t))));
+
+        m = 1000000;
+        k = 9;
+        N = 20000;
+        t = 0.2;
+        i++;
+        System.out.println("test num: " + i +" - m: " + m + " k: " + k +" N: " + N + " t: " + t);
+        System.out.println("Experimental Value: "+false_positive_send_arrays(m, k, N, t));
+        System.out.println("Mathematical Value: " + calculate_theoretical_value(m, k, (int)(N*(1-t))));
+
+        m = 1000000;
+        k = 11;
+        N = 20000;
+        t = 0.2;
+        i++;
+        System.out.println("test num: " + i +" - m: " + m + " k: " + k +" N: " + N + " t: " + t);
+        System.out.println("Experimental Value: "+false_positive_send_arrays(m, k, N, t));
+        System.out.println("Mathematical Value: " + calculate_theoretical_value(m, k, (int)(N*(1-t))));
+
+        m = 1000000;
+        k = 13;
+        N = 20000;
+        t = 0.2;
+        i++;
+        System.out.println("test num: " + i +" - m: " + m + " k: " + k +" N: " + N + " t: " + t);
+        System.out.println("Experimental Value: "+false_positive_send_arrays(m, k, N, t));
+        System.out.println("Mathematical Value: " + calculate_theoretical_value(m, k, (int)(N*(1-t))));
+
+        m = 3200000;
+        k = 13;
+        N = 100000;
+        t = 0.2;
+        i++;
+        System.out.println("test num: " + i +" - m: " + m + " k: " + k +" N: " + N + " t: " + t);
+        System.out.println("Experimental Value: "+false_positive_send_arrays(m, k, N, t));
+        System.out.println("Mathematical Value: " + calculate_theoretical_value(m, k, (int)(N*(1-t))));
+
+        m = 32000000;
+        k = 13;
+        N = 100000;
+        t = 0.2;
+        i++;
+        System.out.println("test num: " + i +" - m: " + m + " k: " + k +" N: " + N + " t: " + t);
+        System.out.println("Experimental Value: "+false_positive_send_arrays(m, k, N, t));
+        System.out.println("Mathematical Value: " + calculate_theoretical_value(m, k, (int)(N*(1-t))));
+
+        m = 320000;
+        k = 13;
+        N = 100000;
+        t = 0.2;
+        i++;
+        System.out.println("test num: " + i +" - m: " + m + " k: " + k +" N: " + N + " t: " + t);
+        System.out.println("Experimental Value: "+false_positive_send_arrays(m, k, N, t));
+        System.out.println("Mathematical Value: " + calculate_theoretical_value(m, k, (int)(N*(1-t))));
+
 
 
     }
